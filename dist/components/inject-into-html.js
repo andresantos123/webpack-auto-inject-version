@@ -7,7 +7,7 @@ var InjectIntoHtml = (function () {
         var _this = this;
         this.context.compiler.plugin('emit', function (compilation, cb) {
             var _loop_1 = function() {
-                if (_this.context.options.injectIntoHtmlRegex.test(basename)) {
+                if (basename.indexOf('.html') >= 0) {
                     var asset = compilation.assets[basename];
                     var modFile_1 = asset.source().replace(/(\<\{version\}\>)/g, _this.context.version);
                     asset.source = function () { return modFile_1; };
