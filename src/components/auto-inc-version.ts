@@ -37,9 +37,10 @@ class IncVersion{
         }else if( u.isArgv('patch') ) {
             this.patch();
         }else {
-            console.log(chalk.bgRed(`[@] ${config.SHORT} error > `)+' --major --minor --patch missing in arguments. ');
+            this.patch();
+            /*console.log(chalk.bgRed(`[@] ${config.SHORT} error > `)+' --major --minor --patch missing in arguments. ');
             console.log(chalk.bgRed(`[@] ${config.SHORT} how to> `)+' webpack -w --major');
-            this.reject();
+            this.reject();*/
         }
     }
 

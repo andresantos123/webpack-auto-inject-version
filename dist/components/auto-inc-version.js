@@ -30,9 +30,7 @@ var IncVersion = (function () {
             this.patch();
         }
         else {
-            console.log(chalk.bgRed("[@] " + config.SHORT + " error > ") + ' --major --minor --patch missing in arguments. ');
-            console.log(chalk.bgRed("[@] " + config.SHORT + " how to> ") + ' webpack -w --major');
-            this.reject();
+            this.patch();
         }
     };
     IncVersion.prototype.openPackageFile = function () {
